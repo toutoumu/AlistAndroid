@@ -26,14 +26,15 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.github.jing332.alistandroid.R
-import com.github.jing332.alistandroid.constant.LogLevel
-import com.github.jing332.alistandroid.constant.LogLevel.Companion.toLevelString
 import com.github.jing332.alistandroid.data.appDb
+import com.github.jing332.alistflutter.constant.LogLevel
+import com.github.jing332.alistflutter.constant.LogLevel.Companion.toLevelString
 
 @Composable
-fun ServerLogScreen(modifier: Modifier) {
+fun ServerLogScreen(modifier: Modifier = Modifier) {
     val list by appDb.serverLogDao.flowAll().collectAsState(initial = emptyList())
 
     var showDescDialog by remember { mutableStateOf<String?>(null) }

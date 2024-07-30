@@ -4,7 +4,6 @@ import android.annotation.SuppressLint
 import android.util.Log
 import com.github.jing332.alistandroid.R
 import com.github.jing332.alistflutter.app
-import com.github.jing332.alistandroid.constant.LogLevel
 import com.github.jing332.alistandroid.data.appDb
 import com.github.jing332.alistandroid.data.entities.ServerLog
 import com.github.jing332.alistandroid.data.entities.ServerLog.Companion.evalLog
@@ -12,6 +11,7 @@ import com.github.jing332.alistandroid.util.FileUtils.readAllText
 import com.github.jing332.alistandroid.util.StringUtils.removeAnsiCodes
 import com.github.jing332.alistandroid.util.ToastUtils.longToast
 import com.github.jing332.alistflutter.AListService
+import com.github.jing332.alistflutter.constant.LogLevel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job

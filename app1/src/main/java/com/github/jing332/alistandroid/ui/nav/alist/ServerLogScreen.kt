@@ -28,8 +28,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.github.jing332.alistandroid.R
-import com.github.jing332.alistandroid.constant.LogLevel
-import com.github.jing332.alistandroid.constant.LogLevel.Companion.toLevelString
+import com.github.jing332.alistflutter.constant.LogLevel
+import com.github.jing332.alistflutter.constant.LogLevel.Companion.toLevelString
 import com.github.jing332.alistandroid.data.appDb
 
 @Composable

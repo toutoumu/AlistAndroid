@@ -4,7 +4,7 @@ import android.annotation.SuppressLint
 import android.util.Log
 import com.github.jing332.alistandroid.R
 import com.github.jing332.alistflutter.app
-import com.github.jing332.alistandroid.constant.LogLevel
+import com.github.jing332.alistflutter.constant.LogLevel
 import com.github.jing332.alistandroid.data.appDb
 import com.github.jing332.alistandroid.data.entities.ServerLog
 import com.github.jing332.alistandroid.data.entities.ServerLog.Companion.evalLog

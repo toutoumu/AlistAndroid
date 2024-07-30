@@ -6,6 +6,9 @@ import alistlib.LogCallback
 import android.annotation.SuppressLint
 import android.util.Log
 import com.github.jing332.alistandroid.R
+import com.github.jing332.alistandroid.data.appDb
+import com.github.jing332.alistandroid.data.entities.ServerLog
+import com.github.jing332.alistandroid.util.StringUtils.removeAnsiCodes
 import com.github.jing332.alistflutter.app
 import com.github.jing332.alistflutter.config.AppConfig
 import com.github.jing332.alistflutter.constant.LogLevel
@@ -60,7 +63,7 @@ object AList : Event, LogCallback {
         Logger.log(LogLevel.FATAL, type, msg)
     }
 
-    private val mDateFormatter by lazy  { SimpleDateFormat("MM-dd HH:mm:ss", Locale.getDefault())}
+    private val mDateFormatter by lazy { SimpleDateFormat("MM-dd HH:mm:ss", Locale.getDefault()) }
 
     override fun onLog(level: Short, time: Long, log: String) {
         Log.d(TAG, "onLog: $level, $time, $log")

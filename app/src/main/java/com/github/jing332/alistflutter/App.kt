@@ -1,11 +1,18 @@
 package com.github.jing332.alistflutter
 
+import android.app.Activity
 import android.app.Application
 import android.content.Context
+import android.os.Bundle
 import android.os.Looper
 import com.github.jing332.alistandroid.BuildConfig
+import com.github.jing332.alistandroid.data.appDb
+import com.github.jing332.alistandroid.data.entities.ServerLog
 import com.github.jing332.alistandroid.util.ClipboardUtils
+import com.github.jing332.alistandroid.util.StringUtils.removeAnsiCodes
 import com.github.jing332.alistandroid.util.ToastUtils.longToast
+import com.github.jing332.alistflutter.model.alist.Logger
+import com.github.jing332.alistflutter.model.alist.Logger.Listener
 import xcrash.XCrash
 import java.io.File
 import java.net.InetAddress
@@ -17,6 +24,11 @@ class App : Application() {
 
     override fun onCreate() {
         super.onCreate()
+        Logger.addListener(object : Listener {
+            override fun onLog(level: Int, time: String, msg: String) {
+                appDb.serverLogDao.insert(ServerLog(level = level, time = time, message = msg))
+            }
+        })
         //        CrashHandler(this)
         //        startService(Intent(this, AlistService::class.java))
     }

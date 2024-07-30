@@ -2,7 +2,7 @@ package com.github.jing332.alistandroid.data.entities
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.github.jing332.alistandroid.constant.LogLevel
+import com.github.jing332.alistflutter.constant.LogLevel
 
 @Entity("server_logs")
 data class ServerLog(

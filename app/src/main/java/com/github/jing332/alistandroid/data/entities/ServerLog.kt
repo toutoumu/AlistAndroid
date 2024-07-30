@@ -2,7 +2,7 @@ package com.github.jing332.alistandroid.data.entities
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.github.jing332.alistandroid.constant.LogLevel
+import com.github.jing332.alistflutter.constant.LogLevel
 
 @Entity("server_logs")
 data class ServerLog(
@@ -11,6 +11,7 @@ data class ServerLog(
 
     @LogLevel val level: Int,
     val message: String,
+    val time: String? = null,
     val description: String? = null,
 ) {
     companion object {
