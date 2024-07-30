@@ -35,12 +35,12 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.core.content.FileProvider
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.github.jing332.alistandroid.R
-import com.github.jing332.alistandroid.constant.AppConst
-import com.github.jing332.alistandroid.model.alist.AList
 import com.github.jing332.alistandroid.ui.widgets.DenseOutlinedField
 import com.github.jing332.alistandroid.util.AndroidUtils.performLongPress
 import com.github.jing332.alistandroid.util.ClipboardUtils
 import com.github.jing332.alistandroid.util.ToastUtils.longToast
+import com.github.jing332.alistflutter.constant.AppConst
+import com.github.jing332.alistflutter.model.alist.AList
 import java.io.File
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class)
@@ -88,20 +88,20 @@ fun AListConfigScreen(vm: AListConfigViewModel = viewModel()) {
                             style = MaterialTheme.typography.titleLarge
                         )
                         Text(
-                            AList.dataPath,
+                            AList.dataDir,
                             style = MaterialTheme.typography.bodySmall,
                             lineHeight = MaterialTheme.typography.bodySmall.lineHeight * 0.75f,
                             modifier = Modifier
                                 .clip(MaterialTheme.shapes.extraSmall)
                                 .combinedClickable(onClick = {
                                     openFileUseExtApp(
-                                        AList.dataPath,
+                                        AList.dataDir,
                                         context.getString(R.string.open_data_folder),
                                         mimeType = ""
                                     )
                                 }, onLongClick = {
                                     view.performLongPress()
-                                    ClipboardUtils.copyText(AList.dataPath)
+                                    ClipboardUtils.copyText(AList.dataDir)
                                     context.longToast(R.string.path_copied)
                                 })
                         )

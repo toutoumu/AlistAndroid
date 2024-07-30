@@ -50,7 +50,6 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.github.jing332.alistandroid.BuildConfig
 import com.github.jing332.alistandroid.R
-import com.github.jing332.alistandroid.model.alist.AList
 import com.github.jing332.alistandroid.ui.LocalMainViewModel
 import com.github.jing332.alistandroid.ui.MyTools
 import com.github.jing332.alistandroid.ui.widgets.LocalBroadcastReceiver

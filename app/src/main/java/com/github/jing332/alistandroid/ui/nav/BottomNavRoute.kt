@@ -18,10 +18,10 @@ sealed class BottomNavRoute(
 ) {
     companion object {
         val routes = listOf(
-            AListConfig,
-            AList,
+            // AListConfig,
             Web,
-//            AListProvider,
+            AList,
+            // AListProvider,
             Settings,
         )
     }

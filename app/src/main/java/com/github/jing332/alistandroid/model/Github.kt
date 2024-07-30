@@ -1,7 +1,7 @@
 package com.github.jing332.alistandroid.model
 
 import com.drake.net.Net
-import com.github.jing332.alistandroid.constant.AppConst
+import com.github.jing332.alistflutter.constant.AppConst
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
