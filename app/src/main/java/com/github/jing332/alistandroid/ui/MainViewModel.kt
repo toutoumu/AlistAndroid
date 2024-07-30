@@ -8,7 +8,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.github.jing332.alistandroid.config.AppConfig
 import com.github.jing332.alistandroid.model.AppUpdateChecker
-import com.github.jing332.alistandroid.model.UpdateResult
+import com.github.jing332.alistflutter.model.UpdateResult
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 

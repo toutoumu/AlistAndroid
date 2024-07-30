@@ -4,6 +4,7 @@ import android.util.Log
 import com.github.jing332.alistandroid.BuildConfig
 import com.github.jing332.alistandroid.util.AndroidUtils
 import com.github.jing332.alistandroid.util.StringUtils.toNumberInt
+import com.github.jing332.alistflutter.model.UpdateResult
 
 object AppUpdateChecker {
     const val TAG = "AppUpdateChecker"

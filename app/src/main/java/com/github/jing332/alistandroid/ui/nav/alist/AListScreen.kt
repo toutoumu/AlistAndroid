@@ -101,7 +101,8 @@ fun AListScreen() {
                     enabled = pwd.isNotBlank(),
                     onClick = {
                         showPwdDialog = false
-                        AList.setAdminPassword(pwd)
+                        // AList.setAdminPassword(pwd)
+                        com.github.jing332.alistflutter.model.alist.AList.setAdminPassword(pwd)
                         context.longToast(
                             R.string.admin_password_set_to,
                             pwd

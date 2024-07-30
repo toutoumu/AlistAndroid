@@ -16,10 +16,8 @@ class App : Application() {
 
     override fun onCreate() {
         super.onCreate()
-
-
-//        CrashHandler(this)
-//        startService(Intent(this, AlistService::class.java))
+        //        CrashHandler(this)
+        //        startService(Intent(this, AlistService::class.java))
     }
 
     override fun attachBaseContext(base: Context?) {

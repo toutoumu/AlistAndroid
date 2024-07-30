@@ -1,4 +1,4 @@
-/*
+package com.github.jing332.alistandroid.ui.widgets/*
 package com.github.jing332.text_searcher.ui.widgets
 
 import androidx.compose.animation.animateContentSize

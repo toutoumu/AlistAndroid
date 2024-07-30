@@ -1,4 +1,4 @@
-/*
+package com.github.jing332.alistandroid.model.alistclient.resp/*
 package com.github.jing332.alistandroid.model.alistclient.resp
 
 import kotlinx.serialization.Serializable

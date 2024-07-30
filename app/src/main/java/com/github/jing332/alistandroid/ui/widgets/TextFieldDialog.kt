@@ -1,4 +1,4 @@
-package com.github.jing332.text_searcher.ui.widgets
+package com.github.jing332.alistandroid.ui.widgets
 
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.OutlinedTextField
