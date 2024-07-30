@@ -2,7 +2,7 @@ package com.github.jing332.alistandroid.model.alist
 
 import android.os.FileObserver
 import android.util.Log
-import com.github.jing332.alistandroid.app
+import com.github.jing332.alistflutter.app
 import com.github.jing332.alistandroid.constant.AppConst
 import com.github.jing332.alistandroid.util.ToastUtils.longToast
 import kotlinx.coroutines.CancellationException

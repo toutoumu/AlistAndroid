@@ -6,7 +6,7 @@ import alistlib.LogCallback
 import android.annotation.SuppressLint
 import android.util.Log
 import com.github.jing332.alistandroid.R
-import com.github.jing332.alistandroid.app
+import com.github.jing332.alistflutter.app
 import com.github.jing332.alistflutter.config.AppConfig
 import com.github.jing332.alistflutter.constant.LogLevel
 import com.github.jing332.alistflutter.utils.ToastUtils.longToast

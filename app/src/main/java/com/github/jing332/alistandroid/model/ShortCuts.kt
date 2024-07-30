@@ -6,7 +6,7 @@ import androidx.core.content.pm.ShortcutInfoCompat
 import androidx.core.content.pm.ShortcutManagerCompat
 import androidx.core.graphics.drawable.IconCompat
 import com.github.jing332.alistandroid.R
-import com.github.jing332.alistandroid.ui.SwitchServerActivity
+import com.github.jing332.alistflutter.SwitchServerActivity
 
 
 object ShortCuts {

@@ -4,7 +4,7 @@ import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.ClipboardManager.OnPrimaryClipChangedListener
 import android.content.Context
-import com.github.jing332.alistandroid.app
+import com.github.jing332.alistflutter.app
 
 
 /**

@@ -40,11 +40,11 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.github.jing332.alistandroid.R
-import com.github.jing332.alistandroid.service.AListService
 import com.github.jing332.alistandroid.ui.widgets.LocalBroadcastReceiver
 import com.github.jing332.alistandroid.util.StringUtils.parseToMap
 import com.github.jing332.alistandroid.util.ToastUtils.longToast
 import com.github.jing332.alistandroid.util.ToastUtils.toast
+import com.github.jing332.alistflutter.AListService
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import java.io.File

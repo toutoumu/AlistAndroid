@@ -51,13 +51,13 @@ import androidx.compose.ui.unit.dp
 import com.github.jing332.alistandroid.BuildConfig
 import com.github.jing332.alistandroid.R
 import com.github.jing332.alistandroid.model.alist.AList
-import com.github.jing332.alistandroid.service.AListService
-import com.github.jing332.alistandroid.service.AListService.Companion.ACTION_STATUS_CHANGED
 import com.github.jing332.alistandroid.ui.LocalMainViewModel
 import com.github.jing332.alistandroid.ui.MyTools
-import com.github.jing332.alistandroid.ui.SwitchServerActivity
 import com.github.jing332.alistandroid.ui.widgets.LocalBroadcastReceiver
 import com.github.jing332.alistandroid.util.ToastUtils.longToast
+import com.github.jing332.alistflutter.AListService
+import com.github.jing332.alistflutter.AListService.Companion.ACTION_STATUS_CHANGED
+import com.github.jing332.alistflutter.SwitchServerActivity
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

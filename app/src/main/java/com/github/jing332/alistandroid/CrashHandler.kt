@@ -8,6 +8,8 @@ import com.drake.net.utils.runMain
 import com.github.jing332.alistandroid.util.ClipboardUtils
 import com.github.jing332.alistandroid.util.FileUtil
 import com.github.jing332.alistandroid.util.ToastUtils.longToast
+import com.github.jing332.alistflutter.App
+import com.github.jing332.alistflutter.app
 import java.text.DateFormat
 import java.util.Date
 

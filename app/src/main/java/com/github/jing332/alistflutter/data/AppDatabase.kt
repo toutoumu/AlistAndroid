@@ -7,7 +7,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.github.jing332.alistandroid.data.dao.ServerLogDao
 import com.github.jing332.alistflutter.data.entities.ServerLog
-import com.github.jing332.alistandroid.app.Companion.app
+import com.github.jing332.alistflutter.app.Companion.app
 
 val appDb by lazy { AppDatabase.create() }
 
