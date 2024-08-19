@@ -3,8 +3,6 @@ package com.github.jing332.alistandroid.ui
 import android.Manifest
 import android.annotation.SuppressLint
 import android.content.Intent
-import android.content.pm.PackageManager
-import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import androidx.activity.viewModels
@@ -20,8 +18,8 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.compose.rememberNavController
 import com.github.jing332.alistandroid.config.AppConfig
 import com.github.jing332.alistandroid.model.ShortCuts
-import com.github.jing332.alistandroid.ui.MyTools.killBattery
 import com.github.jing332.alistandroid.ui.nav.BottomNavBar
+import com.github.jing332.alistandroid.ui.nav.FileUtils
 import com.github.jing332.alistandroid.ui.nav.NavigationGraph
 import com.google.accompanist.permissions.ExperimentalPermissionsApi
 import com.google.accompanist.permissions.isGranted
@@ -89,6 +87,21 @@ class MainActivity : BaseComposeActivity() {
                     navController = navController,
                     Modifier.padding(bottom = it.calculateBottomPadding())
                 )
+            }
+        }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        data?.let {
+            if (resultCode == RESULT_OK && requestCode == 333) {
+                if (it.data != null) {
+                    val uri = it.data
+                    val filePath = FileUtils.getFullPathFromTreeUri(uri, this)
+                    if (filePath != null) {
+                        AppConfig.dataDir.value = filePath
+                    }
+                }
             }
         }
     }

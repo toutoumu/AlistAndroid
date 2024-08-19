@@ -1,6 +1,7 @@
 package com.github.jing332.alistandroid.ui.nav.settings
 
 import android.Manifest
+import android.app.Activity
 import android.content.Intent
 import android.net.Uri
 import android.os.Build
@@ -15,10 +16,10 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowCircleUp
 import androidx.compose.material.icons.filled.FilePresent
+import androidx.compose.material.icons.filled.Folder
 import androidx.compose.material.icons.filled.HdrAuto
 import androidx.compose.material.icons.filled.ScreenLockPortrait
 import androidx.compose.material.icons.filled.SupervisorAccount
@@ -40,7 +41,6 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLifecycleOwner
@@ -191,6 +191,19 @@ fun SettingsScreen() {
                 icon = { Icon(Icons.Default.SystemSecurityUpdateGood, contentDescription = null) }
             )
 
+            var dataDir by remember { AppConfig.dataDir }
+            BasePreferenceWidget(
+                onClick = {
+                    (context as Activity).startActivityForResult(
+                        Intent(Intent.ACTION_OPEN_DOCUMENT_TREE),
+                        333
+                    )
+                },
+                icon = { Icon(Icons.Default.Folder, null) },
+                title = { Text(stringResource(id = R.string.dataDirectory)) },
+                subTitle = { Text(dataDir) }
+            )
+
             DividerPreference {
                 Text(stringResource(id = R.string.web))
             }
@@ -253,4 +266,5 @@ fun SettingsScreen() {
             )
         }
     }
+
 }

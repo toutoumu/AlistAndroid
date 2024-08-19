@@ -45,4 +45,9 @@ object AppConfig {
         initialValue = false
     )
 
+    var dataDir = mutableDataSaverStateOf(
+        dataSaverInterface = pref,
+        key = "dataDir",
+        initialValue = app.getExternalFilesDir("data")?.absolutePath!!
+    )
 }
